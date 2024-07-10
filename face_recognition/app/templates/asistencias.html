@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencias</title>
+</head>
+<body>
+    <h1>Listado de Asistencias</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Curso</th>
+                <th>Fecha y Hora</th>
+                <th>Tipo de Asistencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for asistencia in asistencias %}
+            <tr>
+                <td>{{ asistencia.id }}</td>
+                <td>{{ asistencia.usuario.nombre }}</td>
+                <td>{{ asistencia.curso.nombre_curso }}</td>
+                <td>{{ asistencia.fecha_hora }}</td>
+                <td>{{ asistencia.tipo_asistencia }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
